@@ -44,12 +44,15 @@ const Home = () => {
       <h1 className="text-2xl font-bold mb-4">Products</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
-          // <div key={product.id} className="border p-4 rounded-lg shadow">
+          // <div
+          //   key={product.id}
+          //   className="border p-4 rounded-lg shadow text-center"
+          // >
           //   <Link to={`/product/${product.id}`}>
           //     <img
           //       src={product.image}
           //       alt={product.title}
-          //       className="h-32 object-contain mb-2"
+          //       className="h-32 object-contain mb-2 mx-auto"
           //     />
           //     <h2 className="text-lg font-semibold">{product.title}</h2>
           //     <p className="text-gray-700">${product.price}</p>
@@ -63,7 +66,7 @@ const Home = () => {
           // </div>
           <div
             key={product.id}
-            className="border p-4 rounded-lg shadow text-center"
+            className="border p-4 rounded-lg shadow text-center flex flex-col justify-between"
           >
             <Link to={`/product/${product.id}`}>
               <img
@@ -74,9 +77,13 @@ const Home = () => {
               <h2 className="text-lg font-semibold">{product.title}</h2>
               <p className="text-gray-700">${product.price}</p>
             </Link>
+            {/* <button
+              onClick={() => handleAddToCart(product)}
+              className="mt-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full w-full"
+            > */}
             <button
               onClick={() => handleAddToCart(product)}
-              className="mt-2 bg-blue-500 text-white px-2 py-1 rounded hover:bg-blue-600"
+              className="mt-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full w-full hover:bg-gradient-to-l hover:from-blue-600 hover:to-indigo-700 transition-all"
             >
               Add to Cart
             </button>

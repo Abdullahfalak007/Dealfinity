@@ -32,9 +32,13 @@ const Cart = () => {
                   <span className="font-semibold">{item.title}</span>
                   <p className="text-gray-700">${item.price.toFixed(2)}</p>
                 </div>
+                {/* <button
+                  onClick={() => handleRemove(item)}
+                  className="bg-red-500 text-white px-4 py-2 rounded-full w-full hover:bg-red-600"
+                > */}
                 <button
                   onClick={() => handleRemove(item)}
-                  className="bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600"
+                  className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full w-auto hover:bg-gradient-to-l hover:from-red-600 hover:to-orange-700 transition-all"
                 >
                   Remove
                 </button>
